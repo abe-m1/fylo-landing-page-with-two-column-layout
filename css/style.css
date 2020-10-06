@@ -13,13 +13,13 @@ img {
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 600px) {
+  @media (min-width: 600px) {
     html {
       font-size: 50%; } }
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     html {
       font-size: 50%; } }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     html {
       font-size: 56.25%; } }
   @media (min-width: 1800px) {
@@ -116,7 +116,7 @@ body {
 .testimonial-text {
   font-size: 1.7rem;
   margin-bottom: 2rem; }
-  @media (max-width: 600px) {
+  @media (min-width: 600px) {
     .testimonial-text {
       font-size: 1.3rem;
       font-weight: 100;
@@ -130,19 +130,19 @@ body {
     height: 2.8rem;
     border-radius: 100px;
     margin-right: 2rem; }
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
       .user-info__image {
         width: 2.4rem;
         height: 2.4rem; } }
   .user-info__name {
     font-weight: 600;
     font-size: 1.4rem; }
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
       .user-info__name {
         font-size: 1.2rem; } }
   .user-info__title {
     font-size: 1.2rem; }
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
       .user-info__title {
         font-size: 1rem; } }
 
