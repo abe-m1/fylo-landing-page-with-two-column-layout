@@ -52,7 +52,8 @@ body {
   margin-bottom: 8rem; }
   @media (min-width: 1400px) {
     .header {
-      height: 17rem; } }
+      height: 19rem;
+      margin-bottom: 3rem; } }
 
 .header-menu {
   font-size: 1.4rem;
@@ -77,20 +78,31 @@ body {
     margin-bottom: 0; }
   @media (min-width: 1400px) {
     .hero-container {
-      flex-direction: row; } }
+      flex-direction: row;
+      margin-bottom: 36rem; }
+      .hero-container:last-of-type {
+        padding-bottom: 22rem; } }
   @media (min-width: 1400px) {
     .hero-container__left {
       order: 1; } }
   .hero-container__intro-image {
     width: 90%;
     margin-bottom: 4rem; }
+    @media (min-width: 1400px) {
+      .hero-container__intro-image {
+        width: 100%; } }
   .hero-container__intro-title {
     width: 100%;
     text-align: center;
     font-size: 2.4rem;
     line-height: 1.4;
     font-weight: 700;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    font-family: 'Raleway', sans-serif; }
+    @media (min-width: 1400px) {
+      .hero-container__intro-title {
+        font-size: 4.4rem;
+        text-align: left; } }
   .hero-container__intro-text {
     width: 90%;
     text-align: center;
@@ -98,23 +110,28 @@ body {
     font-size: 1.5rem;
     line-height: 1.4;
     font-family: 'Open Sans', sans-serif; }
+    @media (min-width: 1400px) {
+      .hero-container__intro-text {
+        font-size: 2rem;
+        text-align: left; } }
   .hero-container__input {
     width: 100%;
     padding: 1.3rem 9rem;
     margin-bottom: 1.7rem; }
     @media (min-width: 1400px) {
       .hero-container__input {
-        width: 45%; } }
+        width: 47%;
+        margin-right: 1rem; } }
   .hero-container__intro-button {
     width: 100%;
-    padding: 1.3rem 9rem;
+    padding: 1.3rem 5rem;
     border: none;
     font-size: 1.5rem;
     background-color: #3065f8;
     color: #fff; }
     @media (min-width: 1400px) {
       .hero-container__intro-button {
-        width: 45%; } }
+        width: 30%; } }
   .hero-container__middle-title {
     width: 100%;
     text-align: center;
@@ -122,6 +139,13 @@ body {
     line-height: 1.4;
     font-weight: 700;
     margin-bottom: 2rem; }
+    @media (min-width: 1400px) {
+      .hero-container__middle-title {
+        font-size: 4.4rem;
+        text-align: left; } }
+  @media (min-width: 1400px) {
+    .hero-container__middle-image {
+      width: 100%; } }
   .hero-container__middle-text {
     width: 90%;
     text-align: left;
@@ -131,6 +155,12 @@ body {
     font-family: 'Open Sans', sans-serif; }
     .hero-container__middle-text:last-of-type {
       margin-bottom: 4rem; }
+    @media (min-width: 1400px) {
+      .hero-container__middle-text {
+        font-size: 1.8rem; } }
+
+.flex {
+  flex: 40%; }
 
 .middle {
   margin-bottom: 6rem; }
@@ -138,6 +168,9 @@ body {
 .see-how-container {
   text-align: center;
   margin-bottom: 5rem; }
+  @media (min-width: 1400px) {
+    .see-how-container {
+      text-align: left; } }
 
 .see-how {
   color: #3c9f8f;
@@ -161,6 +194,10 @@ body {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
   .testimonial-box:not(:last-child) {
     margin-right: 4rem; }
+  @media (min-width: 1400px) {
+    .testimonial-box {
+      width: 50%;
+      margin: 0; } }
 
 .testimonial-text {
   font-size: 1.2rem;
@@ -198,14 +235,38 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5rem; }
+  @media (min-width: 1400px) {
+    .action {
+      flex-direction: row;
+      padding: 10rem;
+      justify-content: flex-start;
+      align-items: flex-start; } }
 
 .action-title {
   margin-bottom: 3rem;
   font-size: 1.5rem; }
+  @media (min-width: 1400px) {
+    .action-title {
+      font-size: 3.5rem; } }
 
 .action-description {
   margin-bottom: 3rem;
   font-size: 1.3rem; }
+  @media (min-width: 1400px) {
+    .action-description {
+      font-size: 2.2rem;
+      width: 70%;
+      margin-bottom: 0; } }
+
+@media (min-width: 1400px) {
+  .action-right {
+    display: flex;
+    flex-direction: column;
+    flex: 40%; } }
+
+@media (min-width: 1400px) {
+  .action-left {
+    flex: 60%; } }
 
 .action-input {
   width: 100%;
@@ -213,7 +274,8 @@ body {
   margin-bottom: 0.7rem; }
   @media (min-width: 1400px) {
     .action-input {
-      width: 45%; } }
+      display: inline-block;
+      width: 100%; } }
 
 .action-button {
   width: 100%;
@@ -224,7 +286,7 @@ body {
   color: #fff; }
   @media (min-width: 1400px) {
     .action-button {
-      width: 45%; } }
+      width: 55%; } }
 
 .icon {
   width: 2rem;
@@ -254,6 +316,9 @@ ion-icon {
   .footer__content {
     display: block;
     padding: 1rem; }
+    @media (min-width: 1400px) {
+      .footer__content {
+        display: flex; } }
   .footer__text {
     flex: 2;
     font-family: 'Open Sans', sans-serif;

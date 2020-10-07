@@ -101,7 +101,8 @@ body {
   margin-bottom: 8rem;
 
   @include respond(desktop) {
-    height: 17rem;
+    height: 19rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -139,6 +140,11 @@ body {
   @include respond(desktop) {
     // margin-bottom: 15rem;
     flex-direction: row;
+    margin-bottom: 36rem;
+
+    &:last-of-type {
+      padding-bottom: 22rem;
+    }
   }
 
   &__left {
@@ -146,9 +152,14 @@ body {
       order: 1;
     }
   }
+
   &__intro-image {
     width: 90%;
     margin-bottom: 4rem;
+
+    @include respond(desktop) {
+      width: 100%;
+    }
   }
 
   &__intro-title {
@@ -158,6 +169,12 @@ body {
     line-height: 1.4;
     font-weight: 700;
     margin-bottom: 3rem;
+    font-family: 'Raleway', sans-serif;
+
+    @include respond(desktop) {
+      font-size: 4.4rem;
+      text-align: left;
+    }
   }
 
   &__intro-text {
@@ -167,6 +184,11 @@ body {
     font-size: 1.5rem;
     line-height: 1.4;
     font-family: 'Open Sans', sans-serif;
+
+    @include respond(desktop) {
+      font-size: 2rem;
+      text-align: left;
+    }
   }
 
   &__input {
@@ -176,20 +198,21 @@ body {
     margin-bottom: 1.7rem;
 
     @include respond(desktop) {
-      width: 45%;
+      width: 47%;
+      margin-right: 1rem;
     }
   }
 
   &__intro-button {
     width: 100%;
-    padding: 1.3rem 9rem;
+    padding: 1.3rem 5rem;
     border: none;
     font-size: 1.5rem;
     background-color: $brightBlue;
     color: $white;
 
     @include respond(desktop) {
-      width: 45%;
+      width: 30%;
     }
   }
 
@@ -200,6 +223,17 @@ body {
     line-height: 1.4;
     font-weight: 700;
     margin-bottom: 2rem;
+
+    @include respond(desktop) {
+      font-size: 4.4rem;
+      text-align: left;
+    }
+  }
+
+  &__middle-image {
+    @include respond(desktop) {
+      width: 100%;
+    }
   }
 
   &__middle-text {
@@ -213,7 +247,14 @@ body {
     &:last-of-type {
       margin-bottom: 4rem;
     }
+
+    @include respond(desktop) {
+      font-size: 1.8rem;
+    }
   }
+}
+.flex {
+  flex: 40%;
 }
 
 .middle {
@@ -223,7 +264,12 @@ body {
 .see-how-container {
   text-align: center;
   margin-bottom: 5rem;
+
+  @include respond(desktop) {
+    text-align: left;
+  }
 }
+
 .see-how {
   color: $moderateCyan;
   text-decoration: none;
@@ -249,6 +295,11 @@ body {
 
   &:not(:last-child) {
     margin-right: 4rem;
+  }
+
+  @include respond(desktop) {
+    width: 50%;
+    margin: 0;
   }
 }
 
@@ -297,16 +348,47 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5rem;
+
+  @include respond(desktop) {
+    flex-direction: row;
+    padding: 10rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .action-title {
   margin-bottom: 3rem;
   font-size: 1.5rem;
+
+  @include respond(desktop) {
+    font-size: 3.5rem;
+  }
 }
 
 .action-description {
   margin-bottom: 3rem;
   font-size: 1.3rem;
+
+  @include respond(desktop) {
+    font-size: 2.2rem;
+    width: 70%;
+    margin-bottom: 0;
+  }
+}
+
+.action-right {
+  @include respond(desktop) {
+    display: flex;
+    flex-direction: column;
+    flex: 40%;
+  }
+}
+
+.action-left {
+  @include respond(desktop) {
+    flex: 60%;
+  }
 }
 
 .action-input {
@@ -316,7 +398,8 @@ body {
   margin-bottom: 0.7rem;
 
   @include respond(desktop) {
-    width: 45%;
+    display: inline-block;
+    width: 100%;
   }
 }
 
@@ -329,7 +412,7 @@ body {
   color: $white;
 
   @include respond(desktop) {
-    width: 45%;
+    width: 55%;
   }
 }
 
@@ -373,6 +456,9 @@ ion-icon {
     display: block;
 
     padding: 1rem;
+    @include respond(desktop) {
+      display: flex;
+    }
   }
 
   &__text {
