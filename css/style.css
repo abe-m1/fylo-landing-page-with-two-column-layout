@@ -33,6 +33,9 @@ body {
 .upper {
   background: url(/images/bg-curve-mobile.svg) no-repeat 51% 100%;
   background-size: 272% 52%; }
+  @media (min-width: 1400px) {
+    .upper {
+      background-size: 272% 50%; } }
 
 .content-container {
   width: 90%;
@@ -62,11 +65,11 @@ body {
     list-style: none; }
     .header-menu__menu-item:not(:last-child) {
       margin-right: 1rem; }
-  @media (min-width: 1400px) {
-    .header-menu {
-      font-size: 2.3rem; }
-      .header-menu:not(:last-child) {
-        margin-right: 3rem; } }
+    @media (min-width: 1400px) {
+      .header-menu__menu-item {
+        font-size: 1.9rem; }
+        .header-menu__menu-item:not(:last-child) {
+          margin-right: 6rem; } }
 
 .hero-container {
   display: flex;
@@ -81,7 +84,7 @@ body {
       flex-direction: row;
       margin-bottom: 36rem; }
       .hero-container:last-of-type {
-        padding-bottom: 22rem; } }
+        padding-bottom: 11.5rem; } }
   @media (min-width: 1400px) {
     .hero-container__left {
       order: 1; } }
@@ -101,8 +104,12 @@ body {
     font-family: 'Raleway', sans-serif; }
     @media (min-width: 1400px) {
       .hero-container__intro-title {
-        font-size: 4.4rem;
-        text-align: left; } }
+        font-size: 4.5rem;
+        text-align: left;
+        line-height: 1.5;
+        margin-bottom: 1.6rem;
+        width: 88%;
+        margin-top: -1.4rem; } }
   .hero-container__intro-text {
     width: 90%;
     text-align: center;
@@ -113,7 +120,8 @@ body {
     @media (min-width: 1400px) {
       .hero-container__intro-text {
         font-size: 2rem;
-        text-align: left; } }
+        text-align: left;
+        margin-bottom: 2rem; } }
   .hero-container__input {
     width: 100%;
     padding: 1.3rem 9rem;
@@ -142,7 +150,8 @@ body {
     @media (min-width: 1400px) {
       .hero-container__middle-title {
         font-size: 4.4rem;
-        text-align: left; } }
+        text-align: left;
+        margin-bottom: 4rem; } }
   @media (min-width: 1400px) {
     .hero-container__middle-image {
       width: 100%; } }
@@ -157,10 +166,13 @@ body {
       margin-bottom: 4rem; }
     @media (min-width: 1400px) {
       .hero-container__middle-text {
-        font-size: 1.8rem; } }
+        font-size: 1.9rem;
+        width: 70%; }
+        .hero-container__middle-text:last-of-type {
+          margin-bottom: 2rem; } }
 
 .flex {
-  flex: 40%; }
+  flex: 50%; }
 
 .middle {
   margin-bottom: 6rem; }
@@ -191,13 +203,16 @@ body {
   margin: auto;
   margin-bottom: 8rem;
   padding: 3rem 1.5rem 2rem 1.5rem;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background: url(/images/icon-quotes.svg) no-repeat 10% 15%;
+  background-size: 5% 5%; }
   .testimonial-box:not(:last-child) {
     margin-right: 4rem; }
   @media (min-width: 1400px) {
     .testimonial-box {
-      width: 50%;
-      margin: 0; } }
+      width: 44%;
+      margin: 0;
+      padding: 6.5rem 4rem 4rem 4rem; } }
 
 .testimonial-text {
   font-size: 1.2rem;
@@ -205,7 +220,7 @@ body {
   margin-bottom: 1.5rem; }
   @media (min-width: 600px) {
     .testimonial-text {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 100;
       line-height: 1.7; } }
 
@@ -219,13 +234,19 @@ body {
     margin-right: 2rem; }
     @media (min-width: 600px) {
       .user-info__image {
-        width: 2.4rem;
-        height: 2.4rem; } }
+        width: 3.5rem;
+        height: 3.5rem; } }
   .user-info__name {
     font-weight: 600;
     font-size: 1rem; }
+    @media (min-width: 1400px) {
+      .user-info__name {
+        font-size: 1.4rem; } }
   .user-info__title {
     font-size: 1rem; }
+    @media (min-width: 1400px) {
+      .user-info__title {
+        font-size: 1.4rem; } }
 
 .action {
   background-color: #585989;
@@ -238,7 +259,7 @@ body {
   @media (min-width: 1400px) {
     .action {
       flex-direction: row;
-      padding: 10rem;
+      padding: 12rem 10rem 8rem 10rem;
       justify-content: flex-start;
       align-items: flex-start; } }
 
@@ -254,7 +275,7 @@ body {
   font-size: 1.3rem; }
   @media (min-width: 1400px) {
     .action-description {
-      font-size: 2.2rem;
+      font-size: 2rem;
       width: 70%;
       margin-bottom: 0; } }
 
@@ -270,12 +291,14 @@ body {
 
 .action-input {
   width: 100%;
-  padding: 1rem 9rem;
+  padding: 1rem 1rem;
   margin-bottom: 0.7rem; }
   @media (min-width: 1400px) {
     .action-input {
       display: inline-block;
-      width: 100%; } }
+      width: 100%;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem; } }
 
 .action-button {
   width: 100%;
@@ -286,7 +309,8 @@ body {
   color: #fff; }
   @media (min-width: 1400px) {
     .action-button {
-      width: 55%; } }
+      width: 60%;
+      padding: 2rem 7rem; } }
 
 .icon {
   width: 2rem;
@@ -313,6 +337,9 @@ ion-icon {
   .footer__container {
     width: 85%;
     margin: auto; }
+    @media (min-width: 1400px) {
+      .footer__container {
+        margin-top: 6.5rem; } }
   .footer__content {
     display: block;
     padding: 1rem; }
