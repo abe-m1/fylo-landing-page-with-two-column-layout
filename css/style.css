@@ -39,14 +39,20 @@ body {
   margin: auto; }
 
 .logo {
-  width: 11rem; }
+  width: 8rem; }
+  @media (min-width: 1400px) {
+    .logo {
+      width: 16rem; } }
 
 .header {
   height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem; }
+  margin-bottom: 8rem; }
+  @media (min-width: 1400px) {
+    .header {
+      height: 17rem; } }
 
 .header-menu {
   font-size: 1.4rem;
@@ -55,67 +61,111 @@ body {
     list-style: none; }
     .header-menu__menu-item:not(:last-child) {
       margin-right: 1rem; }
+  @media (min-width: 1400px) {
+    .header-menu {
+      font-size: 2.3rem; }
+      .header-menu:not(:last-child) {
+        margin-right: 3rem; } }
 
 .hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 18rem; }
+  .hero-container:last-of-type {
+    margin-bottom: 0; }
+  @media (min-width: 1400px) {
+    .hero-container {
+      flex-direction: row; } }
+  @media (min-width: 1400px) {
+    .hero-container__left {
+      order: 1; } }
   .hero-container__intro-image {
-    width: 75%;
+    width: 90%;
     margin-bottom: 4rem; }
   .hero-container__intro-title {
     width: 100%;
     text-align: center;
-    font-size: 3.1rem;
+    font-size: 2.4rem;
     line-height: 1.4;
     font-weight: 700;
-    margin-bottom: 2.5rem; }
+    margin-bottom: 3rem; }
   .hero-container__intro-text {
     width: 90%;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 1.4;
     font-family: 'Open Sans', sans-serif; }
   .hero-container__input {
     width: 100%;
-    padding: 2rem 9rem;
-    margin-bottom: 3rem; }
+    padding: 1.3rem 9rem;
+    margin-bottom: 1.7rem; }
+    @media (min-width: 1400px) {
+      .hero-container__input {
+        width: 45%; } }
   .hero-container__intro-button {
     width: 100%;
-    padding: 2rem 9rem;
+    padding: 1.3rem 9rem;
     border: none;
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     background-color: #3065f8;
     color: #fff; }
+    @media (min-width: 1400px) {
+      .hero-container__intro-button {
+        width: 45%; } }
+  .hero-container__middle-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 2rem; }
+  .hero-container__middle-text {
+    width: 90%;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif; }
+    .hero-container__middle-text:last-of-type {
+      margin-bottom: 4rem; }
+
+.middle {
+  margin-bottom: 6rem; }
+
+.see-how-container {
+  text-align: center;
+  margin-bottom: 5rem; }
 
 .see-how {
   color: #3c9f8f;
   text-decoration: none;
   border-bottom: 1px solid #3c9f8f;
-  padding-bottom: 0.8rem;
-  margin-bottom: 3rem; }
+  padding-bottom: 0.3rem;
+  font-size: 1.5rem; }
 
 .icon-arrow {
-  width: 25px;
+  width: 20px;
   position: relative;
   top: 8px; }
 
 .testimonial-box {
   font-family: 'Open Sans', sans-serif;
   background-color: #fff;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
   padding: 3rem 1.5rem 2rem 1.5rem;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
   .testimonial-box:not(:last-child) {
     margin-right: 4rem; }
 
 .testimonial-text {
-  font-size: 1.7rem;
-  margin-bottom: 2rem; }
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.5rem; }
   @media (min-width: 600px) {
     .testimonial-text {
       font-size: 1.3rem;
@@ -126,8 +176,8 @@ body {
   display: flex;
   align-items: center; }
   .user-info__image {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 100px;
     margin-right: 2rem; }
     @media (min-width: 600px) {
@@ -136,15 +186,9 @@ body {
         height: 2.4rem; } }
   .user-info__name {
     font-weight: 600;
-    font-size: 1.4rem; }
-    @media (min-width: 600px) {
-      .user-info__name {
-        font-size: 1.2rem; } }
+    font-size: 1rem; }
   .user-info__title {
-    font-size: 1.2rem; }
-    @media (min-width: 600px) {
-      .user-info__title {
-        font-size: 1rem; } }
+    font-size: 1rem; }
 
 .action {
   background-color: #585989;
@@ -152,7 +196,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 5rem; }
+
+.action-title {
+  margin-bottom: 3rem;
+  font-size: 1.5rem; }
+
+.action-description {
+  margin-bottom: 3rem;
+  font-size: 1.3rem; }
+
+.action-input {
+  width: 100%;
+  padding: 1rem 9rem;
+  margin-bottom: 0.7rem; }
+  @media (min-width: 1400px) {
+    .action-input {
+      width: 45%; } }
+
+.action-button {
+  width: 100%;
+  padding: 1rem 7rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #3065f8;
+  color: #fff; }
+  @media (min-width: 1400px) {
+    .action-button {
+      width: 45%; } }
 
 .icon {
   width: 2rem;
@@ -168,14 +240,14 @@ ion-icon {
 
 .footer {
   background-color: #070439;
-  padding-top: 19rem;
+  padding-top: 5rem;
   padding-bottom: 7rem;
   color: #fff; }
   .footer__text {
     display: flex; }
   .footer__logo {
     margin-bottom: 3rem;
-    width: 20rem; }
+    width: 18rem; }
   .footer__container {
     width: 85%;
     margin: auto; }
@@ -204,8 +276,9 @@ ion-icon {
     text-align: center; }
   .footer__item {
     margin-bottom: 2rem;
-    font-size: 1.9rem;
-    font-weight: 600; }
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #f6f6fe; }
 
 .attribution {
   font-size: 11px;

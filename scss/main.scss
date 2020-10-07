@@ -83,13 +83,14 @@ body {
 .content-container {
   width: 90%;
   margin: auto;
-
-  @include respond(desktop) {
-  }
 }
 
 .logo {
-  width: 11rem;
+  width: 8rem;
+
+  @include respond(desktop) {
+    width: 16rem;
+  }
 }
 
 .header {
@@ -97,7 +98,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
+
+  @include respond(desktop) {
+    height: 17rem;
+  }
 }
 
 .header-menu {
@@ -111,6 +116,13 @@ body {
       margin-right: 1rem;
     }
   }
+
+  @include respond(desktop) {
+    font-size: 2.3rem;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
 }
 
 .hero-container {
@@ -118,57 +130,110 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 18rem;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include respond(desktop) {
+    // margin-bottom: 15rem;
+    flex-direction: row;
+  }
+
+  &__left {
+    @include respond(desktop) {
+      order: 1;
+    }
+  }
   &__intro-image {
-    width: 75%;
+    width: 90%;
     margin-bottom: 4rem;
   }
 
   &__intro-title {
     width: 100%;
     text-align: center;
-    font-size: 3.1rem;
+    font-size: 2.4rem;
     line-height: 1.4;
     font-weight: 700;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
   }
 
   &__intro-text {
     width: 90%;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 1.4;
     font-family: 'Open Sans', sans-serif;
   }
 
   &__input {
     width: 100%;
-    padding: 2rem 9rem;
+    padding: 1.3rem 9rem;
     // font-size: 2.1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.7rem;
+
+    @include respond(desktop) {
+      width: 45%;
+    }
   }
 
   &__intro-button {
     width: 100%;
-    padding: 2rem 9rem;
+    padding: 1.3rem 9rem;
     border: none;
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     background-color: $brightBlue;
     color: $white;
+
+    @include respond(desktop) {
+      width: 45%;
+    }
+  }
+
+  &__middle-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__middle-text {
+    width: 90%;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
   }
 }
 
+.middle {
+  margin-bottom: 6rem;
+}
+
+.see-how-container {
+  text-align: center;
+  margin-bottom: 5rem;
+}
 .see-how {
   color: $moderateCyan;
   text-decoration: none;
   border-bottom: 1px solid $moderateCyan;
-  padding-bottom: 0.8rem;
-  margin-bottom: 3rem;
+  padding-bottom: 0.3rem;
+  font-size: 1.5rem;
 }
 
 .icon-arrow {
-  width: 25px;
+  width: 20px;
   position: relative;
   top: 8px;
 }
@@ -176,9 +241,9 @@ body {
 .testimonial-box {
   font-family: 'Open Sans', sans-serif;
   background-color: $white;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
   padding: 3rem 1.5rem 2rem 1.5rem;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
@@ -188,9 +253,9 @@ body {
 }
 
 .testimonial-text {
-  font-size: 1.7rem;
-
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.5rem;
 
   @include respond(phone) {
     font-size: 1.3rem;
@@ -204,8 +269,8 @@ body {
   align-items: center;
 
   &__image {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 100px;
     margin-right: 2rem;
 
@@ -217,17 +282,10 @@ body {
 
   &__name {
     font-weight: 600;
-    font-size: 1.4rem;
-
-    @include respond(phone) {
-      font-size: 1.2rem;
-    }
+    font-size: 1rem;
   }
   &__title {
-    font-size: 1.2rem;
-    @include respond(phone) {
-      font-size: 1rem;
-    }
+    font-size: 1rem;
   }
 }
 
@@ -238,6 +296,41 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5rem;
+}
+
+.action-title {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+}
+
+.action-description {
+  margin-bottom: 3rem;
+  font-size: 1.3rem;
+}
+
+.action-input {
+  width: 100%;
+  padding: 1rem 9rem;
+  // font-size: 2.1rem;
+  margin-bottom: 0.7rem;
+
+  @include respond(desktop) {
+    width: 45%;
+  }
+}
+
+.action-button {
+  width: 100%;
+  padding: 1rem 7rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: $brightBlue;
+  color: $white;
+
+  @include respond(desktop) {
+    width: 45%;
+  }
 }
 
 .icon {
@@ -258,7 +351,7 @@ ion-icon {
 
 .footer {
   background-color: $veryDarkBlue;
-  padding-top: 19rem;
+  padding-top: 5rem;
   padding-bottom: 7rem;
   color: $white;
 
@@ -268,7 +361,7 @@ ion-icon {
 
   &__logo {
     margin-bottom: 3rem;
-    width: 20rem;
+    width: 18rem;
   }
 
   &__container {
@@ -312,8 +405,9 @@ ion-icon {
 
   &__item {
     margin-bottom: 2rem;
-    font-size: 1.9rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $lightGrayishBlue;
   }
 }
 
