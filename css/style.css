@@ -82,7 +82,7 @@ body {
       flex-direction: row;
       margin-bottom: 36rem; }
       .hero-container:last-of-type {
-        padding-bottom: 11.5rem; } }
+        padding-bottom: 10.5rem; } }
   @media (min-width: 900px) {
     .hero-container__left {
       order: 1; } }
@@ -287,6 +287,7 @@ body {
   .action__input {
     width: 100%;
     padding: 1rem 1rem;
+    background-color: #fff;
     margin-bottom: 0.7rem; }
     @media (min-width: 900px) {
       .action__input {
@@ -327,6 +328,9 @@ ion-icon {
   padding-top: 5rem;
   padding-bottom: 7rem;
   color: #fff; }
+  @media (min-width: 900px) {
+    .footer {
+      padding-bottom: 0; } }
   .footer__text {
     display: flex; }
   .footer__logo {
