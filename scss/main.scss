@@ -89,14 +89,6 @@ body {
   margin: auto;
 }
 
-.logo {
-  width: 8rem;
-
-  @include respond(desktop) {
-    width: 16rem;
-  }
-}
-
 .header {
   height: 6rem;
   display: flex;
@@ -108,24 +100,32 @@ body {
     height: 19rem;
     margin-bottom: 3rem;
   }
-}
 
-.header-menu {
-  font-size: 1.4rem;
-  display: flex;
-
-  &__menu-item {
-    list-style: none;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
+  &__logo {
+    width: 8rem;
 
     @include respond(desktop) {
-      font-size: 1.9rem;
+      width: 18rem;
+    }
+  }
+
+  &__menu {
+    font-size: 1.4rem;
+    display: flex;
+
+    &__menu-item {
+      list-style: none;
 
       &:not(:last-child) {
-        margin-right: 6rem;
+        margin-right: 1rem;
+      }
+
+      @include respond(desktop) {
+        font-size: 1.9rem;
+
+        &:not(:last-child) {
+          margin-right: 6rem;
+        }
       }
     }
   }
@@ -203,7 +203,7 @@ body {
 
   &__input {
     width: 100%;
-    padding: 1.3rem 9rem;
+    padding: 1.3rem 1rem;
     // font-size: 2.1rem;
     margin-bottom: 1.7rem;
 
@@ -268,6 +268,7 @@ body {
     }
   }
 }
+
 .flex {
   flex: 50%;
 }
@@ -276,21 +277,21 @@ body {
   margin-bottom: 6rem;
 }
 
-.see-how-container {
+.see-how {
   text-align: center;
   margin-bottom: 5rem;
 
   @include respond(desktop) {
     text-align: left;
   }
-}
 
-.see-how {
-  color: $moderateCyan;
-  text-decoration: none;
-  border-bottom: 1px solid $moderateCyan;
-  padding-bottom: 0.3rem;
-  font-size: 1.5rem;
+  &__container {
+    color: $moderateCyan;
+    text-decoration: none;
+    border-bottom: 1px solid $moderateCyan;
+    padding-bottom: 0.3rem;
+    font-size: 1.5rem;
+  }
 }
 
 .icon-arrow {
@@ -380,67 +381,69 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
   }
-}
 
-.action-title {
-  margin-bottom: 3rem;
-  font-size: 1.5rem;
+  &__title {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
 
-  @include respond(desktop) {
-    font-size: 3.5rem;
+    @include respond(desktop) {
+      font-size: 3.3rem;
+    }
   }
-}
 
-.action-description {
-  margin-bottom: 3rem;
-  font-size: 1.3rem;
+  &__description {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
 
-  @include respond(desktop) {
-    font-size: 2rem;
-    width: 70%;
-    margin-bottom: 0;
+    @include respond(desktop) {
+      font-size: 2rem;
+      width: 70%;
+      margin-bottom: 0;
+    }
   }
-}
 
-.action-right {
-  @include respond(desktop) {
-    display: flex;
-    flex-direction: column;
-    flex: 40%;
+  &__right {
+    @include respond(desktop) {
+      display: flex;
+      flex-direction: column;
+      flex: 40%;
+    }
   }
-}
 
-.action-left {
-  @include respond(desktop) {
-    flex: 60%;
+  &__left {
+    @include respond(desktop) {
+      flex: 60%;
+    }
   }
-}
 
-.action-input {
-  width: 100%;
-  padding: 1rem 1rem;
-  // font-size: 2.1rem;
-  margin-bottom: 0.7rem;
-
-  @include respond(desktop) {
-    display: inline-block;
+  &__input {
     width: 100%;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+    // font-size: 2.1rem;
+    margin-bottom: 0.7rem;
+
+    @include respond(desktop) {
+      display: inline-block;
+      width: 94%;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      margin-left: -2.5rem;
+    }
   }
-}
 
-.action-button {
-  width: 100%;
-  padding: 1rem 7rem;
-  border: none;
-  font-size: 1.2rem;
-  background-color: $brightBlue;
-  color: $white;
+  &__button {
+    width: 100%;
+    padding: 1rem 7rem;
+    border: none;
+    font-size: 1.2rem;
+    background-color: $brightBlue;
+    color: $white;
 
-  @include respond(desktop) {
-    width: 60%;
-    padding: 2rem 7rem;
+    @include respond(desktop) {
+      width: 60%;
+      padding: 2rem 7rem;
+      margin-left: -2.5rem;
+    }
   }
 }
 
@@ -529,9 +532,18 @@ ion-icon {
   }
 }
 
+::placeholder {
+  color: $lightGray;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  display: none;
+
+  @include respond(desktop) {
+    display: block;
+  }
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

@@ -41,12 +41,6 @@ body {
   width: 90%;
   margin: auto; }
 
-.logo {
-  width: 8rem; }
-  @media (min-width: 1400px) {
-    .logo {
-      width: 16rem; } }
-
 .header {
   height: 6rem;
   display: flex;
@@ -57,19 +51,23 @@ body {
     .header {
       height: 19rem;
       margin-bottom: 3rem; } }
-
-.header-menu {
-  font-size: 1.4rem;
-  display: flex; }
-  .header-menu__menu-item {
-    list-style: none; }
-    .header-menu__menu-item:not(:last-child) {
-      margin-right: 1rem; }
+  .header__logo {
+    width: 8rem; }
     @media (min-width: 1400px) {
-      .header-menu__menu-item {
-        font-size: 1.9rem; }
-        .header-menu__menu-item:not(:last-child) {
-          margin-right: 6rem; } }
+      .header__logo {
+        width: 18rem; } }
+  .header__menu {
+    font-size: 1.4rem;
+    display: flex; }
+    .header__menu__menu-item {
+      list-style: none; }
+      .header__menu__menu-item:not(:last-child) {
+        margin-right: 1rem; }
+      @media (min-width: 1400px) {
+        .header__menu__menu-item {
+          font-size: 1.9rem; }
+          .header__menu__menu-item:not(:last-child) {
+            margin-right: 6rem; } }
 
 .hero-container {
   display: flex;
@@ -124,7 +122,7 @@ body {
         margin-bottom: 2rem; } }
   .hero-container__input {
     width: 100%;
-    padding: 1.3rem 9rem;
+    padding: 1.3rem 1rem;
     margin-bottom: 1.7rem; }
     @media (min-width: 1400px) {
       .hero-container__input {
@@ -177,19 +175,18 @@ body {
 .middle {
   margin-bottom: 6rem; }
 
-.see-how-container {
+.see-how {
   text-align: center;
   margin-bottom: 5rem; }
   @media (min-width: 1400px) {
-    .see-how-container {
+    .see-how {
       text-align: left; } }
-
-.see-how {
-  color: #3c9f8f;
-  text-decoration: none;
-  border-bottom: 1px solid #3c9f8f;
-  padding-bottom: 0.3rem;
-  font-size: 1.5rem; }
+  .see-how__container {
+    color: #3c9f8f;
+    text-decoration: none;
+    border-bottom: 1px solid #3c9f8f;
+    padding-bottom: 0.3rem;
+    font-size: 1.5rem; }
 
 .icon-arrow {
   width: 20px;
@@ -262,55 +259,51 @@ body {
       padding: 12rem 10rem 8rem 10rem;
       justify-content: flex-start;
       align-items: flex-start; } }
-
-.action-title {
-  margin-bottom: 3rem;
-  font-size: 1.5rem; }
+  .action__title {
+    margin-bottom: 3rem;
+    font-size: 1.5rem; }
+    @media (min-width: 1400px) {
+      .action__title {
+        font-size: 3.3rem; } }
+  .action__description {
+    margin-bottom: 3rem;
+    font-size: 1.3rem; }
+    @media (min-width: 1400px) {
+      .action__description {
+        font-size: 2rem;
+        width: 70%;
+        margin-bottom: 0; } }
   @media (min-width: 1400px) {
-    .action-title {
-      font-size: 3.5rem; } }
-
-.action-description {
-  margin-bottom: 3rem;
-  font-size: 1.3rem; }
+    .action__right {
+      display: flex;
+      flex-direction: column;
+      flex: 40%; } }
   @media (min-width: 1400px) {
-    .action-description {
-      font-size: 2rem;
-      width: 70%;
-      margin-bottom: 0; } }
-
-@media (min-width: 1400px) {
-  .action-right {
-    display: flex;
-    flex-direction: column;
-    flex: 40%; } }
-
-@media (min-width: 1400px) {
-  .action-left {
-    flex: 60%; } }
-
-.action-input {
-  width: 100%;
-  padding: 1rem 1rem;
-  margin-bottom: 0.7rem; }
-  @media (min-width: 1400px) {
-    .action-input {
-      display: inline-block;
-      width: 100%;
-      padding: 2rem 1rem;
-      margin-bottom: 2rem; } }
-
-.action-button {
-  width: 100%;
-  padding: 1rem 7rem;
-  border: none;
-  font-size: 1.2rem;
-  background-color: #3065f8;
-  color: #fff; }
-  @media (min-width: 1400px) {
-    .action-button {
-      width: 60%;
-      padding: 2rem 7rem; } }
+    .action__left {
+      flex: 60%; } }
+  .action__input {
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-bottom: 0.7rem; }
+    @media (min-width: 1400px) {
+      .action__input {
+        display: inline-block;
+        width: 94%;
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        margin-left: -2.5rem; } }
+  .action__button {
+    width: 100%;
+    padding: 1rem 7rem;
+    border: none;
+    font-size: 1.2rem;
+    background-color: #3065f8;
+    color: #fff; }
+    @media (min-width: 1400px) {
+      .action__button {
+        width: 60%;
+        padding: 2rem 7rem;
+        margin-left: -2.5rem; } }
 
 .icon {
   width: 2rem;
@@ -372,9 +365,16 @@ ion-icon {
     font-weight: 400;
     color: #f6f6fe; }
 
+::placeholder {
+  color: #bfbfbf; }
+
 .attribution {
   font-size: 11px;
-  text-align: center; }
+  text-align: center;
+  display: none; }
+  @media (min-width: 1400px) {
+    .attribution {
+      display: block; } }
 
 .attribution a {
   color: #3e52a3; }
