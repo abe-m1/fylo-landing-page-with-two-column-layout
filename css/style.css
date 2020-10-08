@@ -212,7 +212,9 @@ body {
     .testimonial-box {
       width: 44%;
       margin: 0;
-      padding: 6.5rem 4rem 4rem 4rem; } }
+      padding: 6.5rem 4rem 4rem 4rem;
+      background: url(/images/icon-quotes.svg) no-repeat 12% 18%;
+      background-size: 5% 7%; } }
 
 .testimonial-text {
   font-size: 1.2rem;
