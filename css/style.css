@@ -290,7 +290,8 @@ body {
     width: 100%;
     padding: 1rem 1rem;
     background-color: #fff;
-    margin-bottom: 0.7rem; }
+    margin-bottom: 0.7rem;
+    border: none; }
     @media (min-width: 900px) {
       .action__input {
         display: inline-block;
