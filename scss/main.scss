@@ -26,13 +26,13 @@ $white: #fff;
 
 //mixins
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media (min-width: 600px) {
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
       @content;
     }
   }
-  @if $breakpoint == tab-port {
-    @media (min-width: 900px) {
+  @if $breakpoint == desktop {
+    @media (min-width: 1400px) {
       @content;
     }
   }
@@ -41,14 +41,13 @@ $white: #fff;
       @content;
     }
   }
-
-  @if $breakpoint == desktop {
-    @media (min-width: 1400px) {
+  @if $breakpoint == tab-port {
+    @media (min-width: 900px) {
       @content;
     }
   }
-  @if $breakpoint == big-desktop {
-    @media (min-width: 1800px) {
+  @if $breakpoint == phone {
+    @media (min-width: 600px) {
       @content;
     }
   }
@@ -79,7 +78,7 @@ body {
   background: url(/images/bg-curve-mobile.svg) no-repeat 51% 100%;
   background-size: 272% 52%;
 
-  @include respond(desktop) {
+  @include respond(tab-port) {
     background-size: 272% 50%;
   }
 }
@@ -96,7 +95,7 @@ body {
   align-items: center;
   margin-bottom: 8rem;
 
-  @include respond(desktop) {
+  @include respond(tab-port) {
     height: 19rem;
     margin-bottom: 3rem;
   }
@@ -104,7 +103,7 @@ body {
   &__logo {
     width: 8rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       width: 18rem;
     }
   }
@@ -120,7 +119,7 @@ body {
         margin-right: 1rem;
       }
 
-      @include respond(desktop) {
+      @include respond(tab-port) {
         font-size: 1.9rem;
 
         &:not(:last-child) {
@@ -142,7 +141,7 @@ body {
     margin-bottom: 0;
   }
 
-  @include respond(desktop) {
+  @include respond(tab-port) {
     // margin-bottom: 15rem;
     flex-direction: row;
     margin-bottom: 36rem;
@@ -153,7 +152,7 @@ body {
   }
 
   &__left {
-    @include respond(desktop) {
+    @include respond(tab-port) {
       order: 1;
     }
   }
@@ -162,7 +161,7 @@ body {
     width: 90%;
     margin-bottom: 4rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       width: 100%;
     }
   }
@@ -176,7 +175,7 @@ body {
     margin-bottom: 3rem;
     font-family: 'Raleway', sans-serif;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 4.5rem;
       text-align: left;
       line-height: 1.5;
@@ -194,7 +193,7 @@ body {
     line-height: 1.4;
     font-family: 'Open Sans', sans-serif;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 2rem;
       text-align: left;
       margin-bottom: 2rem;
@@ -207,7 +206,7 @@ body {
     // font-size: 2.1rem;
     margin-bottom: 1.7rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       width: 47%;
       margin-right: 1rem;
     }
@@ -221,7 +220,7 @@ body {
     background-color: $brightBlue;
     color: $white;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       width: 30%;
     }
   }
@@ -234,7 +233,7 @@ body {
     font-weight: 700;
     margin-bottom: 2rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 4.4rem;
       text-align: left;
       margin-bottom: 4rem;
@@ -242,7 +241,7 @@ body {
   }
 
   &__middle-image {
-    @include respond(desktop) {
+    @include respond(tab-port) {
       width: 100%;
     }
   }
@@ -259,7 +258,7 @@ body {
       margin-bottom: 4rem;
     }
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 1.9rem;
       width: 70%;
       &:last-of-type {
@@ -281,7 +280,7 @@ body {
   text-align: center;
   margin-bottom: 5rem;
 
-  @include respond(desktop) {
+  @include respond(tab-port) {
     text-align: left;
   }
 
@@ -315,7 +314,7 @@ body {
     margin-right: 4rem;
   }
 
-  @include respond(desktop) {
+  @include respond(tab-port) {
     width: 44%;
     margin: 0;
     padding: 6.5rem 4rem 4rem 4rem;
@@ -354,13 +353,13 @@ body {
     font-weight: 600;
     font-size: 1rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 1.4rem;
     }
   }
   &__title {
     font-size: 1rem;
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 1.4rem;
     }
   }
@@ -375,7 +374,7 @@ body {
   align-items: center;
   padding: 5rem;
 
-  @include respond(desktop) {
+  @include respond(tab-port) {
     flex-direction: row;
     padding: 12rem 10rem 8rem 10rem;
     justify-content: flex-start;
@@ -386,7 +385,7 @@ body {
     margin-bottom: 3rem;
     font-size: 1.5rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 3.3rem;
     }
   }
@@ -395,7 +394,7 @@ body {
     margin-bottom: 3rem;
     font-size: 1.3rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 2rem;
       width: 70%;
       margin-bottom: 0;
@@ -403,7 +402,7 @@ body {
   }
 
   &__right {
-    @include respond(desktop) {
+    @include respond(tab-port) {
       display: flex;
       flex-direction: column;
       flex: 40%;
@@ -411,7 +410,7 @@ body {
   }
 
   &__left {
-    @include respond(desktop) {
+    @include respond(tab-port) {
       flex: 60%;
     }
   }
@@ -422,7 +421,7 @@ body {
     // font-size: 2.1rem;
     margin-bottom: 0.7rem;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       display: inline-block;
       width: 94%;
       padding: 2rem 1rem;
@@ -439,7 +438,7 @@ body {
     background-color: $brightBlue;
     color: $white;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       width: 60%;
       padding: 2rem 7rem;
       margin-left: -2.5rem;
@@ -482,7 +481,7 @@ ion-icon {
     width: 85%;
     margin: auto;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       margin-top: 6.5rem;
     }
   }
@@ -491,7 +490,7 @@ ion-icon {
     display: block;
 
     padding: 1rem;
-    @include respond(desktop) {
+    @include respond(tab-port) {
       display: flex;
     }
   }
@@ -541,7 +540,7 @@ ion-icon {
   text-align: center;
   display: none;
 
-  @include respond(desktop) {
+  @include respond(tab-port) {
     display: block;
   }
 }
