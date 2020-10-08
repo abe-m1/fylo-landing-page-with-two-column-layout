@@ -427,6 +427,7 @@ body {
     // font-size: 2.1rem;
     background-color: $white;
     margin-bottom: 0.7rem;
+    border: none;
 
     @include respond(tab-port) {
       display: inline-block;
